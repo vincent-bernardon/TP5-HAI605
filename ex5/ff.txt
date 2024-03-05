@@ -1,0 +1,13 @@
+# Définir les titres
+array Titles[4] = ["Versail", "Modif Y 0", "Modif Y -40", "Modif Y 100"]
+
+# Définir les fichiers
+array Files[4] = ["versail.dat", "modifY_Y_versail_0-Cb_versail-Cr_versail_toRGB.dat", "modifY_Y_versail_-40-Cb_versail-Cr_versail_toRGB.dat", "modifY_Y_versail_100-Cb_versail-Cr_versail_toRGB.dat"]
+
+# Définir les couleurs
+array FileColors[4] = ['#FF0000', '#008000', '#0000FF', '#800080'] # red, green, blue, purple
+array LightColors[4] = ['#FFC0CB', '#90EE90', '#ADD8E6', '#E6E6FA'] # pink, light green, light blue, lavender
+array DarkColors[4] = ['#8B0000', '#006400', '#00008B', '#4B0082'] # dark red, dark green, dark blue, indigo
+
+# Tracer les données
+plot for [i=1:4] Files[i] using 2 with lines lt rgb FileColors[i] title Titles[i].' Rouge', for [i=1:4] Files[i] using 3 with lines lt rgb LightColors[i] title Titles[i].' Vert', for [i=1:4] Files[i] using 4 with lines lt rgb DarkColors[i] title Titles[i].' Bleu'
